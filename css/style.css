@@ -46,6 +46,7 @@ nav {
 	left: 0;
 	padding-top: 40px;
 	box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.15);
+	z-index: 2;
 }
 nav img {
 	margin-left: 50px;
@@ -100,6 +101,15 @@ main {
 }
 main .main-header {
 	text-align: right;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 45px;
+	padding-bottom: 45px;
+	padding-right: 50px;
+	background: #fff;
+	z-index: 1;
 }
 main .main-header * {
 	display: inline-block;
@@ -139,6 +149,9 @@ main .main-header p {
 }
 .services > div {
 	margin-top: 65px;
+}
+.services > div:first-child {
+	margin-top: 90px;
 }
 .item {
 	margin-top: 30px;
@@ -196,12 +209,12 @@ main .main-header p {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	background: rgba(31,31,31,.85);
 	display: none;
 	justify-content: center;
 	align-items: center;
-	z-index: 999;
+	z-index: 9;
 }
 .orderform-inner {
 	display: flex;
@@ -300,13 +313,13 @@ main .main-header p {
 		padding-left: 0;
 		padding-right: 0;
 	}
-	main {
+	main, main .main-header {
 		padding-left: 50px;
 		padding-right: 50px;
 	}
 	.callmenu {
 		display: block;
-		position: absolute;
+		position: fixed;
 		top: 44px;
 		left: 50px;
 		width: 40px;
@@ -316,9 +329,6 @@ main .main-header p {
 	}
 	body.opened {
 		overflow-y: hidden;
-	}
-	body.opened .callmenu {
-		position: fixed;
 	}
 	.callmenu-inner {
 		display: inline-block;
@@ -401,7 +411,7 @@ main .main-header p {
 	main .main-header p {
 		margin-right: 0;
 	}
-	main {
+	main, main .main-header {
 		padding-left: 30px;
 		padding-right: 30px;
 	}
@@ -466,7 +476,7 @@ main .main-header p {
 	}
 }
 @media (max-width: 330px) {
-	main {
+	main, main .main-header {
 		padding-top: 30px;
 		padding-bottom: 30px;
 		padding-left: 15px;

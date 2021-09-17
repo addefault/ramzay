@@ -14,7 +14,7 @@ $('.menu li').click(function() {
 	if(!$(this).hasClass('active')) {
 		updateMenuItems($(this));
 		currentSection = $(this).index('li');
-		$('html, body').animate({ scrollTop: $('.services > div').eq(currentSection).offset().top-50 }, 400);
+		$('html, body').animate({ scrollTop: $('.services > div').eq(currentSection).offset().top-40-$('.main-header').outerHeight() }, 400);
 		if($('body').hasClass('opened') && $(window).width() <= 990) {
 			$('body').removeClass('opened');
 			$('.callmenu-inner').removeClass('open');
